@@ -240,7 +240,7 @@
             color: var(--text-primary);
         }
 
-        /* Hero Section */
+        /* Hero Section - ATUALIZADO */
         .hero {
             background: var(--primary-gradient);
             color: var(--white);
@@ -270,7 +270,8 @@
 
         .hero-text {
             flex: 1;
-            max-width: 600px;
+            max-width: 550px;
+            margin-right: 40px;
         }
 
         .hero-text h1 {
@@ -298,10 +299,18 @@
 
         .dashboard-mockup {
             width: 100%;
-            max-width: 500px;
-            border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            max-width: 650px;
+            border-radius: 16px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
             animation: float 6s ease-in-out infinite;
+            overflow: hidden;
+        }
+
+        .dashboard-mockup img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 16px;
         }
 
         @keyframes float {
@@ -598,19 +607,39 @@
         }
 
         /* Responsividade */
+        @media (max-width: 1200px) {
+            .hero-content {
+                gap: 40px;
+            }
+            
+            .hero-text {
+                max-width: 500px;
+                margin-right: 30px;
+            }
+            
+            .dashboard-mockup {
+                max-width: 550px;
+            }
+        }
+
         @media (max-width: 992px) {
             .hero-content {
                 flex-direction: column;
                 text-align: center;
+                gap: 50px;
             }
 
             .hero-text {
                 max-width: 100%;
-                margin-bottom: 50px;
+                margin-right: 0;
             }
 
             .hero-buttons {
                 justify-content: center;
+            }
+
+            .dashboard-mockup {
+                max-width: 600px;
             }
 
             .pricing-card.popular {
@@ -656,7 +685,7 @@
             }
 
             .hero-text h1 {
-                font-size: 2.2rem;
+                font-size: 2.5rem;
             }
 
             .section-title h2 {
@@ -665,6 +694,11 @@
 
             .user-name {
                 display: none;
+            }
+            
+            .dashboard-mockup {
+                max-width: 500px;
+                border-radius: 14px;
             }
         }
 
@@ -677,6 +711,29 @@
             .btn {
                 width: 100%;
                 text-align: center;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+            
+            .dashboard-mockup {
+                max-width: 400px;
+                border-radius: 12px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .dashboard-mockup {
+                max-width: 350px;
+            }
+            
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-text p {
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -700,7 +757,6 @@
                             <span class="user-name">Raul</span>
                             <i class="fas fa-chevron-down"></i>
                             <div class="user-dropdown" id="userDropdown">
-                                <a href="#"><i class="fas fa-cog"></i> Configurações</a>
                                 <a href="#"><i class="fas fa-sign-out-alt"></i> Sair</a>
                             </div>
                         </div>
@@ -725,8 +781,7 @@
                 <div class="dashboard-mockup">
                     <!-- Imagem do dashboard real -->
                     <img src="https://i.postimg.cc/K8NNmvx8/screencapture-show-no-dashboard-vercel-app-2025-10-24-23-25-49-1.png" 
-                         alt="Dashboard ShowNo" 
-                         style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);">
+                         alt="Dashboard ShowNo">
                 </div>
             </div>
         </div>
